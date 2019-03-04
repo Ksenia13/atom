@@ -1,5 +1,10 @@
 package ru.atom;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+
 /**
  * In this assignment you need to implement the following util methods.
  * Note:
@@ -25,7 +30,11 @@ public class Util {
      * @return the largest of values.
      */
     public static int max(int[] values) {
-        throw new UnsupportedOperationException();
+
+        //throw new UnsupportedOperationException();
+        IntStream streamFromArray = Arrays.stream(values);
+        int max = streamFromArray.max().getAsInt();
+        return max;
     }
 
     /**
@@ -35,7 +44,10 @@ public class Util {
      * @return the sum of all values.
      */
     public static long sum(int[] values) {
-        throw new UnsupportedOperationException();
+        //throw new UnsupportedOperationException();
+        LongStream streamFromArray = Arrays.stream(values).asLongStream();
+        long sum = streamFromArray.sum();
+        return sum;
     }
 
 
