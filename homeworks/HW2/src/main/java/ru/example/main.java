@@ -7,9 +7,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.*;
 import java.math.*;
+import org.slf4j.LoggerFactory;
 public class main {
 
+
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(main.class);
     public static int count (String path){
+
         int count = 0;
 
         String line = new String();
@@ -34,7 +38,7 @@ public class main {
         random = (Math.random()+ 1)*10;
         while (random>count) random = random - count;
         count = 0;
-        try(FileReader fr = new FileReader("/Users/Fortapianka/Desktop/words.txt")) {
+        try(FileReader fr = new FileReader("dictionary.txt")) {
             //File words = new File("C:\\Users/Fortapianka/Desktop/words.txt");
             BufferedReader reader = new BufferedReader(fr);
             line = reader.readLine();
@@ -54,8 +58,9 @@ public class main {
         Scanner in = new Scanner(System.in);
         int bulls = 0, cows = 0, round = 10, end = 0;
         String otvet = new String();
+        String otvet_ = new String();
         //String slovo = new String("java");
-        String slovo = new String(word(count("/Users/Fortapianka/Desktop/words.txt")));
+        String slovo = new String(word(count("dictionary.txt")));
         System.out.println("Hello World! Its game bulls and cows!");
         System.out.print("I offered word this letter = ");
         System.out.println(slovo.length());
@@ -72,8 +77,19 @@ public class main {
                 else
                     for (int j = 0; j < slovo.length(); j++)
                         if (slovo.charAt(i) == otvet.charAt(j))
+                        {
                             cows++;
-                continue;
+                            otvet_ = otvet;
+                            otvet = "";
+                            for (int k = 0; k < slovo.length(); k++)
+                            {
+                                if (k == j)
+                                    otvet = otvet + '1';
+                                else otvet = otvet + otvet_.charAt(k);
+                            }
+                            break;
+                        }
+                //continue;
             }
             System.out.print("Bulls = ");
             System.out.println(bulls);
@@ -93,12 +109,13 @@ public class main {
         return end;
     }
     public static void main(String[] args) {
+        log.info("Logger good!");
         int a = 1;
         do {
             a = game();
         }
         while (a == 1);
         System.out.println("Goodbye!");
-
+        log.info("Logger good!");
     }
 }

@@ -1,0 +1,23 @@
+2019-03-19 13:37:31.815 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Работает!
+2019-03-19 13:38:13.700 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Работает!
+2019-03-19 13:39:37.818 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Работает!
+2019-03-19 13:46:18.046 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Логгер работает!
+2019-03-19 14:10:01.357 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 15:40:21.134 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 15:41:23.794 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 15:41:30.310 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:107)] - Logger good!
+2019-03-19 15:43:22.445 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 15:44:03.599 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:107)] - Logger good!
+2019-03-19 15:54:09.351 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 15:55:17.566 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:100)] - Logger good!
+2019-03-19 16:02:02.722 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:102)] - Logger good!
+2019-03-19 16:05:59.669 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:102)] - Logger good!
+2019-03-19 16:57:46.154 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:102)] - Logger good!
+2019-03-19 16:59:16.174 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:109)] - Logger good!
+2019-03-19 16:59:50.844 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:102)] - Logger good!
+2019-03-19 17:17:12.493 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:112)] - Logger good!
+2019-03-19 17:18:56.963 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:112)] - Logger good!
+2019-03-19 17:21:12.796 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:112)] - Logger good!
+2019-03-19 17:23:16.521 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:119)] - Logger good!
+2019-03-19 17:23:46.426 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:112)] - Logger good!
+2019-03-19 17:25:19.555 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:119)] - Logger good!

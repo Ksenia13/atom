@@ -9,10 +9,10 @@ import static org.junit.Assert.*;
 public class test {
     @Test
     public void test1() throws Exception {
-        assertEquals("Unexpected value", main.count("/Users/Fortapianka/Desktop/test1.txt"), 1);
+        assertEquals("Unexpected value", main.count("test1.txt"), 1);
     }
     @Test
     public void test2() throws Exception {
-        assertEquals("Unexpected value", main.count("/Users/Fortapianka/Desktop/test2.txt"), 2);
+        assertEquals("Unexpected value", main.count("test2.txt"), 2);
     }
 }
