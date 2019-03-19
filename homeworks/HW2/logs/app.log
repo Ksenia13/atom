@@ -21,3 +21,5 @@
 2019-03-19 17:23:16.521 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:119)] - Logger good!
 2019-03-19 17:23:46.426 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:112)] - Logger good!
 2019-03-19 17:25:19.555 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:119)] - Logger good!
+2019-03-19 20:21:32.824 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:107)] - Logger good!
+2019-03-19 20:24:54.053 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:113)] - Logger good!

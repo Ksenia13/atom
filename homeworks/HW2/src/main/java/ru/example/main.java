@@ -1,71 +1,68 @@
 package ru.example;
+
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.*;
-import java.math.*;
+//import java.io.*;
+//import java.math.*;
 import org.slf4j.LoggerFactory;
 public class main {
-
-
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(main.class);
-    public static int count (String path){
-
+    public static int count(String path) {
         int count = 0;
-
         String line = new String();
-        try(FileReader fr = new FileReader(path)) {
+        try (FileReader fr = new FileReader(path)) {
             //File words = new File("C:\\Users/Fortapianka/Desktop/words.txt");
             BufferedReader reader = new BufferedReader(fr);
             line = reader.readLine();
-
-            while(line!= null){
+            while (line != null) {
                 line = reader.readLine();
                 count++;
             }
         }
-        catch(IOException ex){
+        catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
         return count;
     }
-    public static String word (int count){
+    public static String word(int count) {
         double random = 0;
         String line = new String();
-        random = (Math.random()+ 1)*10;
-        while (random>count) random = random - count;
+        random = (Math.random() + 1) * 10;
+        while (random > count) random = random - count;
         count = 0;
-        try(FileReader fr = new FileReader("dictionary.txt")) {
+        try (FileReader fr = new FileReader("dictionary.txt")) {
             //File words = new File("C:\\Users/Fortapianka/Desktop/words.txt");
             BufferedReader reader = new BufferedReader(fr);
             line = reader.readLine();
             random--;
-            while(random>0){
+            while (random > 0) {
                 line = reader.readLine();
                 random--;
             }
         }
-        catch(IOException ex){
+        catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
         return line;
     }
-    public static int game ()
-    {
+    public static int game() {
         Scanner in = new Scanner(System.in);
         int bulls = 0, cows = 0, round = 10, end = 0;
         String otvet = new String();
-        String otvet_ = new String();
+        String otvet1 = new String();
         //String slovo = new String("java");
         String slovo = new String(word(count("dictionary.txt")));
         System.out.println("Hello World! Its game bulls and cows!");
         System.out.print("I offered word this letter = ");
         System.out.println(slovo.length());
         do {
-            bulls = 0; cows = 0; round--;
+            bulls = 0;
+            cows = 0;
+            round--;
             System.out.print("Input word ");
             System.out.print(slovo.length());
             System.out.println(" letters --->");
@@ -76,16 +73,14 @@ public class main {
                     bulls++;
                 else
                     for (int j = 0; j < slovo.length(); j++)
-                        if (slovo.charAt(i) == otvet.charAt(j))
-                        {
+                        if (slovo.charAt(i) == otvet.charAt(j)) {
                             cows++;
-                            otvet_ = otvet;
+                            otvet1 = otvet;
                             otvet = "";
-                            for (int k = 0; k < slovo.length(); k++)
-                            {
+                            for (int k = 0; k < slovo.length(); k++) {
                                 if (k == j)
                                     otvet = otvet + '1';
-                                else otvet = otvet + otvet_.charAt(k);
+                                else otvet = otvet + otvet1.charAt(k);
                             }
                             break;
                         }
@@ -96,7 +91,7 @@ public class main {
             System.out.print("Cows = ");
             System.out.println(cows);
             if (round == 0) break;
-        } while(bulls < slovo.length());
+        } while (bulls < slovo.length());
 
         if (round == 0) System.out.print("Game over!");
         else
@@ -110,11 +105,10 @@ public class main {
     }
     public static void main(String[] args) {
         log.info("Logger good!");
-        int a = 1;
+        int end = 1;
         do {
-            a = game();
-        }
-        while (a == 1);
+            end = game();
+        } while (end == 1);
         System.out.println("Goodbye!");
         log.info("Logger good!");
     }
