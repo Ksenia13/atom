@@ -4,15 +4,13 @@ import org.junit.Test;
 import org.junit.Ignore;
 import static org.junit.Assert.*;
 
-
-
-public class test {
-    @Test
+public class Testing {
+    @org.junit.Test
     public void test1() throws Exception {
-        assertEquals("Unexpected value", main.count("test1.txt"), 1);
+        assertEquals("Unexpected value", Main.count("test1.txt"), 1);
     }
-    @Test
+    @org.junit.Test
     public void test2() throws Exception {
-        assertEquals("Unexpected value", main.count("test2.txt"), 2);
+        assertEquals("Unexpected value", Main.count("test2.txt"), 2);
     }
 }

@@ -9,8 +9,11 @@ import java.io.IOException;
 //import java.io.*;
 //import java.math.*;
 import org.slf4j.LoggerFactory;
-public class main {
-    private static final org.slf4j.Logger log = LoggerFactory.getLogger(main.class);
+
+public class Main {
+
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(Main.class);
+
     public static int count(String path) {
         int count = 0;
         String line = new String();
@@ -28,6 +31,7 @@ public class main {
         }
         return count;
     }
+
     public static String word(int count) {
         double random = 0;
         String line = new String();
@@ -49,9 +53,13 @@ public class main {
         }
         return line;
     }
+
     public static int game() {
         Scanner in = new Scanner(System.in);
-        int bulls = 0, cows = 0, round = 10, end = 0;
+        int bulls = 0;
+        int cows = 0;
+        int round = 10;
+        int end = 0;
         String otvet = new String();
         String otvet1 = new String();
         //String slovo = new String("java");
@@ -98,12 +106,13 @@ public class main {
             System.out.println("You win!");
         System.out.print("It is - ");
         System.out.println(slovo);
-
         System.out.println("Play again? yes = 1 / no = 0");
         end = in.nextInt();
         return end;
     }
-    public static void main(String[] args) {
+
+    public static void main1(String[] args) {
+
         log.info("Logger good!");
         int end = 1;
         do {
