@@ -109,7 +109,7 @@ public class Mygame {
         return end;
     }
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
 
         log.info("Logger good!");
         int end = 1;

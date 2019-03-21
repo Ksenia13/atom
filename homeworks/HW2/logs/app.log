@@ -23,3 +23,5 @@
 2019-03-19 17:25:19.555 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:119)] - Logger good!
 2019-03-19 20:21:32.824 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:107)] - Logger good!
 2019-03-19 20:24:54.053 INFO [main] [ru.example.main] [main] [ru.example.main.main(main.java:113)] - Logger good!
+2019-03-21 19:46:24.971 INFO [main] [ru.example.Mygame] [main] [ru.example.Mygame.main(Mygame.java:114)] - Logger good!
+2019-03-21 19:46:50.895 INFO [main] [ru.example.Mygame] [main] [ru.example.Mygame.main(Mygame.java:120)] - Logger good!
