@@ -1,16 +1,17 @@
 package ru.example;
 
-import org.junit.Test;
-import org.junit.Ignore;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class Testing {
     @org.junit.Test
     public void test1() throws Exception {
-        assertEquals("Unexpected value", Main.count("test1.txt"), 1);
+        assertThat(Mygame.count("test1.txt"), is(equalTo(1)));
     }
+
     @org.junit.Test
     public void test2() throws Exception {
-        assertEquals("Unexpected value", Main.count("test2.txt"), 2);
+        assertThat(Mygame.count("test2.txt"), is(equalTo(2)));
     }
 }

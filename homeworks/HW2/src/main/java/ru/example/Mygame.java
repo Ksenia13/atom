@@ -2,17 +2,15 @@ package ru.example;
 
 import java.util.Scanner;
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 //import java.io.*;
 //import java.math.*;
 import org.slf4j.LoggerFactory;
 
-public class Main {
+public class Mygame {
 
-    private static final org.slf4j.Logger log = LoggerFactory.getLogger(Main.class);
+    private static final org.slf4j.Logger log = LoggerFactory.getLogger(Mygame.class);
 
     public static int count(String path) {
         int count = 0;
