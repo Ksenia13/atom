@@ -5,29 +5,26 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
-
 import java.io.IOException;
-
+import java.util.Date;
 
 public class ChatClient {
     private static final OkHttpClient client = new OkHttpClient();
     private static final String PROTOCOL = "http://";
     private static final String HOST = "localhost";
     private static final String PORT = ":8080";
-
     //POST host:port/chat/login?name=my_name
+
     public static Response login(String name) throws IOException {
         MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
         Request request = new Request.Builder()
                 .post(RequestBody.create(mediaType, ""))
                 .url(PROTOCOL + HOST + PORT + "/chat/login?name=" + name)
                 .build();
-
         return client.newCall(request).execute();
     }
-
     //GET host:port/chat/chat
+
     public static Response viewChat() throws IOException {
         Request request = new Request.Builder()
                 .get()
@@ -36,15 +33,66 @@ public class ChatClient {
                 .build();
         return client.newCall(request).execute();
     }
-
     //POST host:port/chat/say?name=my_name
     //Body: "msg='my_message'"
+
     public static Response say(String name, String msg) throws IOException {
-        throw new UnsupportedOperationException();
+        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+        Request request = new Request.Builder()
+                .post(RequestBody.create(mediaType, "msg='" + msg + "'"))
+                .url(PROTOCOL + HOST + PORT + "/chat/say?name=" + name)
+                .build();
+
+        return client.newCall(request).execute();
+    }
+
+    //POST host:port/chat/date?name=my_name
+    //Body: "msg='my_date'"
+    public static Response date(String name) throws IOException {
+        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+        Date date = new Date();
+        Request request = new Request.Builder()
+                .post(RequestBody.create(mediaType, "msg='" + date.toString() + "'"))
+                .url(PROTOCOL + HOST + PORT + "/chat/say?name=" + name)
+                .build();
+
+        return client.newCall(request).execute();
+    }
+
+    //POST host:port/chat/kot?name=my_name
+    //Body: "msg='kot'"
+    public static Response kot(String name) throws IOException {
+        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+        Request request = new Request.Builder()
+                .post(RequestBody.create(mediaType, "msg='"  + "  /\\_/\\"))
+                .post(RequestBody.create(mediaType, "msg='"  + " >(^,^)<"))
+                .post(RequestBody.create(mediaType, "msg='"  + "   / \\"))
+                .post(RequestBody.create(mediaType, "msg='"  + "  (   )"))
+                .url(PROTOCOL + HOST + PORT + "/chat/say?name=" + name)
+                .build();
+
+        return client.newCall(request).execute();
     }
 
     //GET host:port/chat/online
     public static Response viewOnline() throws IOException {
-        throw new UnsupportedOperationException();
+        Request request = new Request.Builder()
+                .get()
+                .url(PROTOCOL + HOST + PORT + "/chat/online")
+                .addHeader("host", HOST + PORT)
+                .build();
+        return client.newCall(request).execute();
     }
+
+    //POST host:port/chat/logout?name=my_name
+    public static Response logout(String name) throws IOException {
+        MediaType mediaType = MediaType.parse("application/x-www-form-urlencoded");
+        Request request = new Request.Builder()
+                .post(RequestBody.create(mediaType, ""))
+                .url(PROTOCOL + HOST + PORT + "/chat/logout?name=" + name)
+                .build();
+
+        return client.newCall(request).execute();
+    }
+
 }
